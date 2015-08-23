@@ -3,7 +3,7 @@ So I am writing this in a simple text file, you will just punish me by taking of
 
 The training data set contained over 19000 observations and about 160 variables. I did a summary of the variables and found out that about 100 of them have many missing values (NA's) for 19216 out of 19622 so I decided to exclude the variables from building the model. I also dropped the variables describing datetimes of the activities - although they would be very good predictors, I decided that I wanted a model that looks at the characteristics of the movements and not at when the subjects did their exercises.
 
-Also, when preparing data I took into correlation between variables and detected the most correlated pairs (>0.8):
+Also, when preparing data I checked the correlation between variables and detected the most correlated pairs (>0.8):
 ```
    correl                 var1              var2
 1   0.989            roll_belt  total_accel_belt
