@@ -1,0 +1,4 @@
+First, I would like to apologize for not putting this into a compiled html file, but the machine I am working on is a 2005 laptop and I can't get it to knit documents - something called pandoc is missing and it is hard to find this for my Linux distribution (which is designed for older 32bit computers.)
+So I am writing this in a simple text file, you will just punish me by taking off a point when assesing this, and now let's go to the main topic.
+
+The training data set contained over 19000 observations and about 160 variables. I did a summary of the variables and found out that about 100 of them have many missing values (NA's) for 19216 out of 19622 so I decided to exclude them from building the model. I also dropped the variables 
