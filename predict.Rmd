@@ -27,15 +27,15 @@ Also, when preparing data I took into correlation between variables and detected
 Finally I decided not to reduce the number of variables any further because I was preparing a classification model - if that should be a regression model then definitely I would give more attention to picking variables.
 
 Here, I could describe various troubles I was having trying to make the old machine working with the random forests method. Finally though I decided to do the following:
-* set control to trainControl(method = 'cv', number = 5 )
+* set control to trainControl(method = 'cv', number = 5)
 * train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
-- 
+
 I run the model twice:
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
 After creating a model I compared the predicted data with actuals:
 > confusionMatrix(predykcja, train1[-indeksy, 'classe'] )
+```
 Confusion Matrix and Statistics
-
           Reference
 Prediction    A    B    C    D    E
          A 1350   26    0    1    0
@@ -65,11 +65,12 @@ Prevalence             0.2847   0.1935   0.1745   0.1637   0.1837
 Detection Rate         0.2811   0.1835   0.1649   0.1560   0.1783
 Detection Prevalence   0.2868   0.1951   0.1778   0.1599   0.1803
 Balanced Accuracy      0.9899   0.9669   0.9647   0.9741   0.9840
-
+```
 2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment.
 
 I also checked the variable importance to chech which variables are best at explaining the movements:
 > varImp(fit)
+```
 gbm variable importance
 
   only 20 most important variables shown (out of 57)
@@ -87,4 +88,4 @@ pitch_belt         14.675
 gyros_belt_z       14.386
 accel_dumbbell_y   12.939
 roll_dumbbell      12.150
-
+```
