@@ -32,6 +32,7 @@ Here, I could describe various troubles I was having trying to make the old mach
 - train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
 
 I run the model twice:
+
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
 After creating a model I compared the predicted data with actuals:
 > confusionMatrix(predykcja, train1[-indeksy, 'classe'] )
@@ -94,5 +95,10 @@ accel_dumbbell_y   12.939
 roll_dumbbell      12.150
 ```
 The final model was used to predict 20 activities that was a part of the assignment, and I scored 20/20 which confirmed that the model based on gbm was good.
-Having completed this, I decided to play around with various algorithms on smaller (1000 obs) data samples.
+Having completed this, I decided to play around with various algorithms on smaller data samples.
 
+Here are some results, showing how many test cases would predict a model based on 1000 obs samples:
+- gbm 16/20
+- rf 17/20
+- nb 11/20
+- svmLinear 
