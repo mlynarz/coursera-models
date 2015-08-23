@@ -35,6 +35,7 @@ I run the model twice:
 
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
 After creating a model I compared the predicted data with actuals:
+
 > confusionMatrix(predykcja, train1[-indeksy, 'classe'] )
 
 ```
