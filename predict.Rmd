@@ -69,7 +69,7 @@ Detection Prevalence   0.2868   0.1951   0.1778   0.1599   0.1803
 Balanced Accuracy      0.9899   0.9669   0.9647   0.9741   0.9840
 ```
 
-2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment.
+2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment. (when computing this, the processor temperature went from 55 to 77 Celcius :-)
 
 I also checked the variable importance to chech which variables are best at explaining the movements:
 > varImp(fit)
@@ -93,3 +93,6 @@ gyros_belt_z       14.386
 accel_dumbbell_y   12.939
 roll_dumbbell      12.150
 ```
+The final model was used to predict 20 activities that was a part of the assignment, and I scored 20/20 which confirmed that the model based on gbm was good.
+Having completed this, I decided to play around with various algorithms on smaller (1000 obs) data samples.
+
