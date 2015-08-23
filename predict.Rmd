@@ -35,6 +35,7 @@ I run the model twice:
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
 After creating a model I compared the predicted data with actuals:
 > confusionMatrix(predykcja, train1[-indeksy, 'classe'] )
+
 ```
 Confusion Matrix and Statistics
           Reference
@@ -67,6 +68,7 @@ Detection Rate         0.2811   0.1835   0.1649   0.1560   0.1783
 Detection Prevalence   0.2868   0.1951   0.1778   0.1599   0.1803
 Balanced Accuracy      0.9899   0.9669   0.9647   0.9741   0.9840
 ```
+
 2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment.
 
 I also checked the variable importance to chech which variables are best at explaining the movements:
