@@ -104,6 +104,8 @@ Here are some results, showing how many test cases would predict a model based o
 - svmLinear 16/20 (much faster than the above!)
 - svmRadial 14/20
 
-The list of models supported in the caret package is huge:
+The list of models supported in the caret package is huge, so I am not done with this yet:
 http://topepo.github.io/caret/bytag.html
 
+best regards and all the best in your data science future,
+Zbig, Poland.
