@@ -70,7 +70,7 @@ Detection Prevalence   0.2868   0.1951   0.1778   0.1599   0.1803
 Balanced Accuracy      0.9899   0.9669   0.9647   0.9741   0.9840
 ```
 
-2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment. (when computing this, the processor temperature went from 55 to 77 Celcius :-)
+2. Then I run the gbm model on the whole train set, this time to prepare a model for predicting output in the test dataset that was provided with the assignment. (when computing this, the processor temperature went from 54 to 77 Celcius :-)
 
 I also checked the variable importance to chech which variables are best at explaining the movements:
 > varImp(fit)
@@ -101,7 +101,7 @@ Here are some results, showing how many test cases would predict a model based o
 - gbm 16/20
 - rf 17/20
 - nb 11/20
-- svmLinear 16/20 (much faster than the above!)
+- svmLinear 16/20 (much faster than the ones above!)
 - svmRadial 14/20
 
 The list of models supported in the caret package is huge, so I am not done with this yet:
