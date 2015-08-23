@@ -108,4 +108,4 @@ The list of models supported in the caret package is huge, so I am not done with
 http://topepo.github.io/caret/bytag.html
 
 best regards and all the best in your data science future,
-Zbig, Poland.
+Zbig from Poland.
