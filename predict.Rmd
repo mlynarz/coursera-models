@@ -4,6 +4,7 @@ So I am writing this in a simple text file, you will just punish me by taking of
 The training data set contained over 19000 observations and about 160 variables. I did a summary of the variables and found out that about 100 of them have many missing values (NA's) for 19216 out of 19622 so I decided to exclude the variables from building the model. I also dropped the variables describing datetimes of the activities - although they would be very good predictors, I decided that I wanted a model that looks at the characteristics of the movements and not at when the subjects did their exercises.
 
 Also, when preparing data I took into correlation between variables and detected the most correlated pairs (>0.8):
+```
    correl                 var1              var2
 1   0.989            roll_belt  total_accel_belt
 2   0.963            roll_belt      accel_belt_y
@@ -23,12 +24,12 @@ Also, when preparing data I took into correlation between variables and detected
 16  0.841            roll_belt          yaw_belt
 17  0.841         gyros_belt_x magnet_dumbbell_y
 18  0.804       pitch_dumbbell  accel_dumbbell_z
-
+```
 Finally I decided not to reduce the number of variables any further because I was preparing a classification model - if that should be a regression model then definitely I would give more attention to picking variables.
 
 Here, I could describe various troubles I was having trying to make the old machine working with the random forests method. Finally though I decided to do the following:
-* set control to trainControl(method = 'cv', number = 5)
-* train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
+- set control to trainControl(method = 'cv', number = 5)
+- train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
 
 I run the model twice:
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
@@ -70,6 +71,7 @@ Balanced Accuracy      0.9899   0.9669   0.9647   0.9741   0.9840
 
 I also checked the variable importance to chech which variables are best at explaining the movements:
 > varImp(fit)
+
 ```
 gbm variable importance
 
