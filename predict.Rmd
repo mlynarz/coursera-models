@@ -27,8 +27,8 @@ Also, when preparing data I took into correlation between variables and detected
 Finally I decided not to reduce the number of variables any further because I was preparing a classification model - if that should be a regression model then definitely I would give more attention to picking variables.
 
 Here, I could describe various troubles I was having trying to make the old machine working with the random forests method. Finally though I decided to do the following:
-- set control to trainControl(method = 'cv', number = 5 )
-- train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
+* set control to trainControl(method = 'cv', number = 5 )
+* train the model using this control above with the 'gbm' algorithm (to save on memory, I used R in command line, not RStudio by the way :)
 - 
 I run the model twice:
 1. I divided the training set into 2 sets 75/25 (to perform the accuracy analysis):
