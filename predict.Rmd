@@ -101,4 +101,9 @@ Here are some results, showing how many test cases would predict a model based o
 - gbm 16/20
 - rf 17/20
 - nb 11/20
-- svmLinear 
+- svmLinear 16/20 (much faster than the above!)
+- svmRadial 14/20
+
+The list of models supported in the caret package is huge:
+http://topepo.github.io/caret/bytag.html
+
